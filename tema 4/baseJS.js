@@ -27,3 +27,16 @@ function documentWrite(){
     document.write("hey");
 }
 
+var suma = 0;
+var num = 10;
+
+for (let i = 1; i < num; i++) {
+    
+    if (num%i==0) {
+        suma += i*i;
+    }
+    
+}
+
+console.log(suma);
+
