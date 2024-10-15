@@ -48,12 +48,36 @@ function ej3(){
             arr.push(valor);
         }
     } while (valor>=0||isNaN(valor));
+
     //b
     let str = "";
     for (let i = 0; i < arr.length; i++) {
         str+= `${arr[i]} `;
     }
     console.log(str);
+
+    //c
+    let suma = 0;
+    for (let i = 0; i < arr.length; i++) {
+        suma += arr[i];
+    }
+    console.log(suma);
+
+    //d
+    let num = -1;
+    do {
+        num = parseInt(prompt(`mete un numero entero positivo`));
+        if (num<0||isNaN(num)) {
+            alert(`numero incorrecto`);
+        } else {
+            break;
+        }
+    } while (true);
+
+}
+
+function ej4() {
+    
 }
 
 // let a = parseFloat(prompt(`introduce un valor`));
