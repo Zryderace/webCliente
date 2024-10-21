@@ -186,3 +186,91 @@ function listar(array) {
 }
 
 //ejercicio 8
+
+function sumaParcial(){
+    let array = [1,2,3,4,5,6];
+    let arrayNuevo = [...array];
+    let i = 0;
+    let j = 0;
+    let sumatorio;
+    while (i<array.length) {
+        while (j<i) {
+            arrayNuevo[i]+=array[j];
+            j++;
+        }
+        i++;
+        j=0;
+    }
+    // return arrayNuevo;
+    console.log(arrayNuevo);
+}
+
+
+//ejercicio 9
+
+function countBy(){
+    let a = 3;
+    let b = 5;
+    array = [];
+    if (a<0||b<0) {
+        console.log(array);
+    }
+    let i = 0;
+    while (i<b) {
+        array[i]=(i+1)*a;
+        i++;
+    }
+    console.log(array);
+}
+
+//ejercicio 11
+
+function ej11(){
+    let array = (prompt(`dime una frase`));
+    let string = array.split(" ");
+    string.reverse();
+    string.unshift("hola");
+    string = string.join(', ');
+    console.log(string);
+}
+
+//ejercicio 12
+
+function ej12(){
+    arr1 = [1,2,3,3,4];
+    arr2 = [2,1,5];
+    // arrFinal = [4,5];
+    arrFinal = [...arr1,...arr2];
+    arrJunto = [...arr1,...arr2];
+    //lo estoy haciendo 5 veces
+    //juntar arrays para hcaaer el bucle una vez
+    let i = 0;
+    let j = i+1;
+    let k = 0;
+    let valor = '';
+    let check = true;
+    while (i<arrJunto.length) {
+        
+        while (j<arrJunto.length) {
+            if (arrJunto[i]==arrJunto[j]) {
+                valor=arrJunto[i];
+                while (k<arrJunto.length) {
+                    if (valor==arrFinal[k]) {
+                        arrFinal.splice(k,1);
+                        k--;
+                    }
+                    k++;
+                }
+                k = 0;
+                break;
+            }
+            j++;
+        }
+        i++;
+        j= i +1;
+    }
+    
+    console.log(arrFinal);
+
+    
+}
