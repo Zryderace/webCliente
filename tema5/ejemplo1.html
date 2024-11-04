@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="ejemplo1.js">
+      //codigo que no toca DOM
+
+      //esto accede cuando se carga la pagina
+      window.onload = function(){
+
+      }
+      /**
+       * document.
+       * entrada a DOM
+       * ver parrafos = document.getElementsByTagName("p")
+       *
+       *
+       *
+       *
+       *
+       *
+       *
+       */
+    </script>
+  </head>
+  <body>
+    <h1 name="titulito">titulo</h1>
+    <p>texto parrafo 1</p>
+    <p>
+      texto parrafo 2
+      <a href="">enlace en parrafo 2</a>
+    </p>
+    <input type="text" name="usuario" placeholder="pon nombre"/>
+    <button onclick="mostrarNombre()">Mostrar nombre</button>
+
+    <nav>
+        <a href="ejemplo1.html" class="nav-link" id="here">Aqui</a>
+        <a href="index.html" class="nav-link" id="home">Inicio</a>
+        <a href="tiempo.html" class="nav-link" id="tiempo">Tiempo</a>
+        <a href="contactos.html" class="nav-link" id="contactos">Contactos</a>
+    </nav>
+
+    <div>
+        <p>Hola mundo</p>
+        <p></p>
+    </div>
+
+    <table id="tabla" width="300px" height="300px" border="2">
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+            <td>data 3</td>
+        </tr>
+    </table>
+
+    <button onclick="modificarTabla()">modificar tabla</button>
+
+    <p id="parrafo"></p>
+
+  </body>
+</html>
