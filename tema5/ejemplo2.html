@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejejmplo2.js">
+        window.onload = function(){
+
+}
+    </script>
+    <style>
+        .claseOriginal{
+            color: red;
+        }
+        .claseSecundaria{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <p id="parrafo">
+        <b>texto original</b>
+    </p>
+    <button onclick=cambiarTexto()>Cambiar texto</button>
+    <br>
+    <p id="parrafoOrigen">contenido a copiar</p>
+    <p id="parrafoDestino">aqui se copia</p>
+    <button onclick=copiarParrafo()>Copiar</button>
+    <br>
+    <p class="claseOriginal" id="original">Color rojo</p>
+    <p class="claseSecundaria" id="secundario">Color rosa</p>
+    <button onclick=cambiarClase()>Cambiar clase</button>
+</body>
+</html>
