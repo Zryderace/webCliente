@@ -3,7 +3,7 @@ window.onload = function () {
     window.ej11 = ej11;
     window.ej2 = ej2;
 
-    function cambiarColor(element) {
+    function cambiarColor(element, int) {
         // let valor = document.getElementById(`element`);
         // valor.getAttribute(`value`);
         switch (element.getAttribute(`value`)) {
