@@ -8,4 +8,6 @@ button{
     position: relative;
     top: 0;
     left: 0;
+    border: 0.1em dashed red;
+    width: fit-content;
 }

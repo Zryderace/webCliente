@@ -49,8 +49,14 @@ window.onload = function () {
         let img = document.getElementById("hola");
         var style = window.getComputedStyle(img);
         let izquierda = parseInt(style.getPropertyValue("left"));
-        console.log(izquierda);
-        img.style.left = `${izquierda+5}px`;
+        // console.log(izquierda);
+        // console.log(screen.width);
+        // console.log(img.getBoundingClientRect().right)
+        console.log(img.width);
+        if (img.getBoundingClientRect().right+5 < screen.width) {
+            img.style.left = `${izquierda+5}px`;
+        }
+        
     }
 
 
