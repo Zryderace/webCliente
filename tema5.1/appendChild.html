@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="appendChild.js"></script>
+</head>
+<body>
+    <div id="capa">Div capa</div>
+    <div id="pie">Div pie</div>
+    <button onclick="addElement()">Añadir Elemento</button>
+    <ul id="ul">
+
+    </ul>
+    <br>
+    <button onclick="addRow()">Añadir Fila</button>
+    <br>
+    <table border="1" id="table">
+        <tr id="">
+            <td>Producto</td>
+            <td>Precio</td>
+        </tr>
+    </table>
+    <br>
+    <form action="" method="get" id="form">
+        <label for="nombre">nombre</label>
+        <input type="text" name="name1" id="input1">
+        <input type="submit" id="enviar" value="Enviar">
+    </form>
+    <button  onclick="writeName()">Escribir</button>
+    <br>
+    <div id="borrado">
+        <p id="borrar">Borrar esto</p>
+    </div>
+    <button onclick="borrar()">Borrar</button>
+    <br>
+    <div>
+        <ul id="lista">
+            <li>Elemento</li>
+            <li>Elemento</li>
+            <li>Elemento</li>
+            <li>Elemento</li>
+        </ul>
+        <p>Solo borra superior</p>
+        <ul id="listado">
+            <li>Elemento</li>
+            <li>Elemento</li>
+            <li>Elemento</li>
+            <li>Elemento</li>
+        </ul>
+        <br>
+        <button onclick="borrarLi(this)">Borrar LI</button>
+    </div>
+    <div>
+        <table border="1" id="tabla">
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Preducto1</td>
+                <td>Precio1</td>
+            </tr>
+            <tr>
+                <td>Preducto2</td>
+                <td>Precio2</td>
+            </tr>
+            <tr>
+                <td>Preducto3</td>
+                <td>Precio3</td>
+            </tr>
+        </table>
+        <br>
+        <button onclick="eliminarFila()">Eliminar Fila</button>
+    </div>
+    <div>
+        <ul id="cambio">
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+        </ul>
+        <br>
+        <button onclick="reemplazarFila()">Reemplazar Fila</button>
+    </div>
+    <div>
+        <div id="container">
+            <h2>Titulo</h2>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+        </div>
+        <br>
+        <button onclick="sacar1erParrafo()">sacar1erParrafo</button>
+    </div>
+</body>
+</html>
