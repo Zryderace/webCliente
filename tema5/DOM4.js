@@ -1,6 +1,7 @@
 window.onload = function(){
     window.aumentarProgreso = aumentarProgreso;
     window.carrera = carrera;
+    window.reset = reset;
 
     function aumentarProgreso(){
         let meter = document.getElementById("meter");
@@ -27,12 +28,14 @@ window.onload = function(){
 
     function incrementarProgress(){
         let progress = document.getElementById("progress");
-        if (progress.value>100) {
+        if (progress.value>=100) {
             progress.value=100
         } else {
             progress.value+=2;
         }
     }
+
+    var carrerita;
 
     function carrera(){
         let divs = document.getElementsByClassName("ej16")
@@ -50,8 +53,8 @@ window.onload = function(){
             let elementRect = divs[i].getBoundingClientRect();
             let windowWidth = window.innerWidth;
             if (elementRect.right>=windowWidth) {
-                clearInterval(carrerita)
-                
+                reset()
+                //se puede mandar quien gana etc
             } else {
                 let computedStyle = window.getComputedStyle(divs[i])
                 let izquierdaActual = parseInt(computedStyle.getPropertyValue("margin-left"))
@@ -59,5 +62,10 @@ window.onload = function(){
     
             }
         }
+    }
+
+    function reset(){
+        clearInterval(carrerita)
+        //dejar todos a la izquierda si eso
     }
 }
