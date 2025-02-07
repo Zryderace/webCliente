@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="ejercicios1.js"></script>
+    <style>
+        table{
+            border: 5px solid red; height: 300px; width: 300px; margin-left: auto; margin-right: 0px;
+        }
+    </style>
 </head>
 <body>
     <h3>ejercicio1</h3>
@@ -14,6 +19,62 @@
     <br>
     <button onclick=ej11()>cambiar link</button>
     <h3>ejercicio 2</h3>
-    
+    <!-- Ejercicio 2: Crea tres botones y a continuación crea una tabla en de 4 filas y 4 columnas.
+Usando atributos HTML, coloca un borde, unas medidas de 300x300px y una alineación al
+centro. Al pulsar sobre los botones:
+• El primero muestra en un alert los valores de anchura y altura de la tabla, pide unos valores
+nuevos para cada propiedad y los aplica a la tabla. ¿se aplican correctamente los valores?
+¿Falla alguno?
+• El segundo muestra en un alert el valor actual del borde de la tabla y solicita un valor nuevo
+para aplicarlo. ¿Funciona correctamente el nuevo valor?
+• El tercer botón va a cambiar la alineación de la tabla cada vez que se pulse. Es decir, si la
+tabla está alineada al centro, al pulsar el botón, la tabla quedará alineada a la derecha. Si se
+pulsa el botón otra vez, se alineará a la izquierda y si vuelvo a pulsarlo, la tabla se pondrá
+en el centro -->
+    <button onclick=ej21()>mostrar H&W pedir y cambiar</button>
+    <button onclick=ej22()>mostrar valores border pedir y cambiar</button>
+    <button onclick=ej23()>centro>derecha>izquierda</button>
+    <table style="">
+        <tr>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+        </tr>
+        <tr style="border: 5px solid red;">
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+        </tr>
+        <tr>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+        </tr>
+        <tr>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+            <td style="border: 5px solid red;"></td>
+        </tr>
+    </table>
+
+    <h3>ejercicio 3</h3>
+
+    <div id="putocero">0</div>
+    <br>
+    <button onclick="ej31()">sumar</button><button onclick="ej32()">restar</button>
+
+    <h3>ejercicio 4</h3>
+
+    <img id="puto" src="caca.png" alt="">
+    <button onclick="ej41()">sumar</button><button onclick="ej42()">restar</button>
+
+    <h3> </h3>
+
+
+
 </body>
 </html>

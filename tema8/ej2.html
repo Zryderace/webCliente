@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="checkbox" name="checkie" id="tenis">tenis
+        <input type="checkbox" name="checkie" id="basket">basket
+        <input type="checkbox" name="checkie" id="futbol">futbol
+        <textarea name="area" id="target" readonly></textarea>
+    </form>
+    <button id="cambiar">Mostrar seleccionados</button>
+
+    <script>
+        window.onload = function () {
+            let checks = document.getElementsByName("checkie")
+            let valores = "Seleccionados: "
+            //apartado A
+            // document.getElementById("cambiar").onclick = function () {
+            //     checks.forEach(element => {
+            //         if (element.checked) {
+            //             valores += element.id + " "
+            //         }
+            //     });
+            //     document.getElementById("target").value = valores
+            // }
+            //apartado B
+            checks.forEach(element => {
+                element.onclick = function(){
+                    if (this.checked) {
+                        valores += this.id + " "
+                    } else {
+                        valores = valores.replace(this.id + " ","")
+                    }
+                    document.getElementById("target").value = valores
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

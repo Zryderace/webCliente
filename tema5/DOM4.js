@@ -2,6 +2,8 @@ window.onload = function(){
     window.aumentarProgreso = aumentarProgreso;
     window.carrera = carrera;
     window.reset = reset;
+    window.mostrar = mostrar;
+    window.esconder = esconder;
 
     function aumentarProgreso(){
         let meter = document.getElementById("meter");
@@ -43,7 +45,8 @@ window.onload = function(){
         for (let i = 0; i < divs.length; i++) {
             velocidad[i] = (Math.floor(Math.random() * 100) + 1)
         }
-        if (typeof(carrerita)=="undefined") {
+        console.log(typeof(carrerita))
+        if (typeof(carrerita)=="undefined"||typeof(carrerita)=="number") {
             carrerita = setInterval(movimiento,500,velocidad,divs)
         }
     }
@@ -68,4 +71,23 @@ window.onload = function(){
         clearInterval(carrerita)
         //dejar todos a la izquierda si eso
     }
+
+    function mostrar(li){
+        let hijos = li.querySelectorAll("li")
+        // console.log(hijos)
+        hijos.forEach(hijo => {
+            hijo.style.display= "block"
+        });
+    }
+
+    function esconder(li){
+        let hijos = li.querySelectorAll("li")
+        // console.log(hijos)
+        hijos.forEach(hijo => {
+            hijo.style.display= "none"
+        });
+    }
+
+
+
 }

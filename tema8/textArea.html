@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="area" id="textito">Se escribe en el parrafo de abajo</label>
+        <textarea name="area" id="textArea"></textarea>
+    </form>
+    <p id="parrafo"></p>
+    <script>
+        window.onload = function(){
+            var form = document.forms[0]
+            var textArea = document.getElementById("textArea")
+            var parrafo = document.getElementById("parrafo")
+            textArea.oninput = function(){
+                let longitud = this.value.length
+                parrafo.textContent = "Caracteres: " + longitud
+            }
+        }
+    </script>
+    <form action="">
+        <select name="deporte" id="deporte">
+            <option value="futbol">Futbol</option>
+            <option value="baloncesto">Basket</option>
+            <option value="tenis">Tenis</option>
+        </select>
+    </form>
+    <script>
+        window.onload = function (){
+            let select = document.getElementById("deporte")
+            select.onchange = function (){
+                console.log(this.value)
+                console.log(this.selectedIndex)
+                console.log(select.options[1].value)
+                console.log(select.options[1].textContent)
+                console.log(select.options[1].selected)
+                console.log(select.options[1].index)
+            }
+            
+        }
+    </script>
+    <form action="">
+        <input type="radio" name="color" value="rojo">Rojo
+        <input type="radio" name="color" value="azul">Azul
+        <input type="radio" name="color" value="amarillo">amarillo
+    </form>
+
+    <script>
+        window.onload = function (){
+            let radios = document.getElementsByName("color")
+            for (let i = 0; i < radios.length; i++) {
+                radios[i].onclick = function (){
+                    console.log(this.value)
+                    if (this.checked) {
+                        console.log("esta checked miloko")
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

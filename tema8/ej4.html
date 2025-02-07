@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" name="checkie" id="tenis">tenis
+        <input type="checkbox" name="checkie" id="basket">basket
+        <input type="checkbox" name="checkie" id="futbol">futbol
+        <select name="" id="lista">
+        </select>
+    </form>
+
+    <script>
+        window.onload = function(){
+            let checks = document.getElementsByName("checkie")
+            let lista = document.getElementById("lista")
+            checks.forEach(element => {
+                element.onclick = function(){
+                    var id = this.id
+                    let nodo = document.createElement("option")
+                    nodo.textContent = id
+                    nodo.value = id
+                    if (this.checked) {
+                        lista.appendChild(nodo)
+                    } else {
+                        let options = lista.getElementsByTagName("option")
+                        for (let i = 0; i < options.length; i++) {
+                            
+                            if (options[i].value==id) {
+                                lista.removeChild(options[i])
+                                break;
+                            }
+                            
+                        }  
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

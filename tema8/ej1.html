@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="leer">Leer</label>
+        <input type="text" name="leer" id="leer">
+        <label for="escribir">Escribir</label>
+        <input type="text" name="escribir" id="escribir" readonly>
+    </form>
+
+    <script>
+        window.onload = function (){
+            let leer = document.getElementById("leer")
+            let escribir = document.getElementById("escribir")
+            leer.oninput = function(){
+                escribir.value = leer.value
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Euros<input type="text" name="" id="euros">
+        Dolares<input type="text" name="" id="dolares">
+        <br>
+        Conversion:<textarea name="" id="target" readonly></textarea>
+        <br>
+        <select name="" id="tipo">
+            <option value="euroDolar">Euro a Dolar</option>
+            <option value="DolarEuro">Dolar a Euro</option>
+        </select>
+    </form>
+    <button id="action">Convertir</button>
+
+    <script>
+        window.onload = function(){
+            let euros = document.getElementById("euros")
+            let dolares = document.getElementById("dolares")
+            //convRate = 1$ .83€
+            //
+            document.getElementById("action").onclick = function(){
+                let tipo = document.getElementById("tipo").value
+                // console.log(tipo)
+                if (!isNaN(euros.value)&&tipo=="euroDolar"&&euros.value!="") {
+                    dolares.value = (euros.value/0.83).toFixed(2)
+                } else if(!isNaN(dolares.value)&&tipo=="dolarEuro"&&dolares.value!=""){
+                    euros.value = (dolares.value*0.83).toFixed(2)
+                }else{
+                    document.getElementById("target").value = "no has puesto ningun numero"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

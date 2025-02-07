@@ -10,8 +10,8 @@ window.onload = function(){
         let textoActual = td.textContent;
     }
 
-    let parrafoCuenta = document.getElementById("contador");
-    let contador = 0;
+    var parrafoCuenta = document.getElementById("contador");
+    var contador = 0;
 
     function incrementarContador(){
         contador++;
@@ -30,6 +30,12 @@ window.onload = function(){
             boton.textContent = "Pausar";
             idCuenta = setInterval(incrementarContador, 1000);
         }
+    }
+
+    function addClass() {
+        let element = document.getElementById("myElement");
+        let currentClass = element.getAttribute("class");
+        element.setAttribute("class", currentClass + " newClass");
     }
 
 }
